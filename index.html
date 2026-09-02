@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>داروخانه دکتر نگین نصیری | صادقیه تهران</title>
+
+<meta name="description" content="داروخانه دکتر نگین نصیری در صادقیه تهران">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+  background:#f4f8f7;
+  color:#173b36;
+  line-height:1.8;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e4eeee;
+}
+
+.nav{
+  max-width:1150px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-icon{
+  width:45px;
+  height:45px;
+  border-radius:14px;
+  background:#0b8f7c;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  box-shadow:0 6px 18px rgba(11,143,124,.25);
+}
+
+.logo-text{
+  font-weight:900;
+  color:#087c6c;
+}
+
+.logo-text small{
+  display:block;
+  color:#72827f;
+  font-size:11px;
+  font-weight:500;
+}
+
+.nav-buttons{
+  display:flex;
+  gap:8px;
+}
+
+.nav-btn{
+  text-decoration:none;
+  padding:8px 13px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:700;
+  background:#e8f7f3;
+  color:#087c6c;
+}
+
+.hero{
+  max-width:1150px;
+  margin:22px auto;
+  padding:55px 25px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#d9f6ef,#ffffff);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(11,143,124,.08);
+  left:-60px;
+  top:-60px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+}
+
+.badge{
+  display:inline-block;
+  background:white;
+  color:#087c6c;
+  padding:6px 13px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:38px;
+  line-height:1.4;
+  color:#075f54;
+  margin-bottom:12px;
+}
+
+.hero p{
+  color:#60726e;
+  font-size:16px;
+}
+
+.hero-buttons{
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  text-decoration:none;
+  padding:13px 21px;
+  border-radius:14px;
+  font-weight:800;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
+
+.btn-primary{
+  background:#087f70;
+  color:white;
+  box-shadow:0 8px 20px rgba(8,127,112,.22);
+}
+
+.btn-secondary{
+  background:white;
+  color:#087f70;
+  border:1px solid #cde4df;
+}
+
+section{
+  max-width:1150px;
+  margin:45px auto;
+  padding:0 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  color:#087f70;
+  font-size:27px;
+}
+
+.section-title p{
+  color:#788985;
+  font-size:14px;
+}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.category{
+  background:white;
+  padding:24px 15px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(20,70,60,.05);
+  transition:.25s;
+  cursor:pointer;
+}
+
+.category:hover{
+  transform:translateY(-5px);
+}
+
+.category-icon{
+  font-size:35px;
+  display:block;
+  margin-bottom:8px;
+}
+
+.category span:last-child{
+  font-weight:800;
+}
+
+.search{
+  max-width:700px;
+  margin:0 auto 25px;
+}
+
+.search input{
+  width:100%;
+  border:1px solid #d3e5e1;
+  background:white;
+  padding:16px 20px;
+  border-radius:16px;
+  outline:none;
+  font-size:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.03);
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.product{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(20,70,60,.05);
+}
+
+.product-icon{
+  font-size:34px;
+  margin-bottom:7px;
+}
+
+.product h3{
+  color:#087f70;
+  font-size:17px;
+}
+
+.product p{
+  color:#74847f;
+  font-size:13px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.service{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  box-shadow:0 5px 20px rgba(20,70,60,.05);
+}
+
+.service strong{
+  color:#087f70;
+  display:block;
+  margin-bottom:5px;
+}
+
+.service p{
+  font-size:13px;
+  color:#71817d;
+}
+
+.info{
+  background:white;
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 5px 20px rgba(20,70,60,.05);
+}
+
+.info-row{
+  padding:14px 0;
+  border-bottom:1px solid #edf2f1;
+}
+
+.info-row:last-child{
+  border-bottom:none;
+}
+
+.info-row strong{
+  color:#087f70;
+}
+
+.info-row a{
+  color:#087f70;
+  text-decoration:none;
+}
+
+.contact{
+  text-align:center;
+  background:linear-gradient(135deg,#087f70,#11a58e);
+  color:white;
+  padding:40px 20px;
+  border-radius:25px;
+}
+
+.contact h2{
+  font-size:27px;
+  margin-bottom:8px;
+}
+
+.contact p{
+  opacity:.9;
+  font-size:14px;
+}
+
+.contact-buttons{
+  margin-top:22px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.contact .btn-primary{
+  background:white;
+  color:#087f70;
+}
+
+.contact .btn-secondary{
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.35);
+  color:white;
+}
+
+footer{
+  margin-top:55px;
+  background:#063f37;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer strong{
+  font-size:18px;
+}
+
+footer p{
+  font-size:12px;
+  opacity:.75;
+  margin-top:5px;
+}
+
+.float-call{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#087f70;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:25px;
+  box-shadow:0 7px 25px rgba(0,0,0,.2);
+  z-index:999;
+}
+
+@media(min-width:700px){
+
+  .categories{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .products{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .services{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+@media(max-width:500px){
+
+  .hero{
+    margin:12px;
+    padding:40px 20px;
+    border-radius:24px;
+  }
+
+  .hero h1{
+    font-size:29px;
+  }
+
+  .nav-buttons .nav-btn:nth-child(1){
+    display:none;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+
+<div class="logo-icon">⚕️</div>
+
+<div class="logo-text">
+داروخانه دکتر نگین نصیری
+<small>صادقیه تهران</small>
+</div>
+
+</div>
+
+<div class="nav-buttons">
+
+<a class="nav-btn" href="#products">محصولات</a>
+
+<a class="nav-btn" href="tel:02144230342">📞 تماس</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+<div class="hero">
+
+<div class="hero-content">
+
+<div class="badge">
+💚 همراه سلامت شما
+</div>
+
+<h1>
+داروخانه دکتر<br>
+نگین نصیری
+</h1>
+
+<p>
+ارائه محصولات دارویی، مکمل‌ها، محصولات پوست و مو،
+بهداشتی و تجهیزات پزشکی
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn btn-primary" href="tel:02144230342">
+📞 تماس با داروخانه
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.google.com/maps/search/?api=1&query=داروخانه+نگین+نصیری+صادقیه+تهران"
+target="_blank">
+📍 مسیریابی
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<section id="categories">
+
+<div class="section-title">
+
+<h2>دسته‌بندی محصولات</h2>
+
+<p>
+محصولات مورد نیاز خود را پیدا کنید
+</p>
+
+</div>
+
+<div class="categories">
+
+<div class="category">
+<span class="category-icon">💊</span>
+<span>داروها</span>
+</div>
+
+<div class="category">
+<span class="category-icon">💪</span>
+<span>مکمل‌ها</span>
+</div>
+
+<div class="category">
+<span class="category-icon">🧴</span>
+<span>پوست و مو</span>
+</div>
+
+<div class="category">
+<span class="category-icon">👶</span>
+<span>مادر و کودک</span>
+</div>
+
+<div class="category">
+<span class="category-icon">🩺</span>
+<span>تجهیزات پزشکی</span>
+</div>
+
+<div class="category">
+<span class="category-icon">🧼</span>
+<span>محصولات بهداشتی</span>
+</div>
+
+<div class="category">
+<span class="category-icon">💄</span>
+<span>آرایشی</span>
+</div>
+
+<div class="category">
+<span class="category-icon">❤️</span>
+<span>سلامت و مراقبت</span>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="products">
+
+<div class="section-title">
+
+<h2>محصولات پرفروش</h2>
+
+<p>
+برای پیدا کردن محصول موردنظر جستجو کنید
+</p>
+
+</div>
+
+<div class="search">
+
+<input
+id="search"
+type="text"
+placeholder="🔍 جستجوی محصول..."
+onkeyup="searchProducts()">
+
+</div>
+
+
+<div class="products" id="productList">
+
+<div class="product">
+<div class="product-icon">💊</div>
+<h3>ویتامین‌ها</h3>
+<p>انواع ویتامین و مکمل‌های تغذیه‌ای</p>
+</div>
+
+<div class="product">
+<div class="product-icon">💪</div>
+<h3>مکمل‌های ورزشی</h3>
+<p>محصولات مکمل و تغذیه ورزشی</p>
+</div>
+
+<div class="product">
+<div class="product-icon">🧴</div>
+<h3>مراقبت پوست</h3>
+<p>محصولات مراقبت و بهداشت پوست</p>
+</div>
+
+<div class="product">
+<div class="product-icon">🧴</div>
+<h3>مراقبت مو</h3>
+<p>شامپو و محصولات مراقبت از مو</p>
+</div>
+
+<div class="product">
+<div class="product-icon">👶</div>
+<h3>مادر و کودک</h3>
+<p>محصولات مراقبتی مادر و کودک</p>
+</div>
+
+<div class="product">
+<div class="product-icon">🩺</div>
+<h3>تجهیزات پزشکی</h3>
+<p>لوازم و تجهیزات سلامت</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-title">
+
+<h2>خدمات داروخانه</h2>
+
+</div>
+
+<div class="services">
+
+<div class="service">
+<strong>💊 مشاوره دارویی</strong>
+<p>راهنمایی درباره نحوه صحیح مصرف داروها</p>
+</div>
+
+<div class="service">
+<strong>🧴 محصولات مراقبتی</strong>
+<p>ارائه محصولات پوست، مو و بهداشت</p>
+</div>
+
+<div class="service">
+<strong>💪 مکمل و ویتامین</strong>
+<p>معرفی محصولات مکمل و ویتامین</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-title">
+
+<h2>اطلاعات داروخانه</h2>
+
+</div>
+
+<div class="info">
+
+<div class="info-row">
+<strong>👩‍⚕️ مسئول داروخانه:</strong>
+نگین نصیری
+</div>
+
+<div class="info-row">
+<strong>📞 تلفن:</strong>
+<a href="tel:02144230342">
+02144230342
+</a>
+</div>
+
+<div class="info-row">
+<strong>📱 موبایل:</strong>
+<a href="tel:09106803313">
+09106803313
+</a>
+</div>
+
+<div class="info-row">
+<strong>📍 آدرس:</strong>
+بین فلکه اول و دوم صادقیه،
+خیابان ستارخان،
+نبش بلوار شهدای صادقیه،
+پلاک ۲
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="contact">
+
+<h2>با ما در ارتباط باشید</h2>
+
+<p>
+برای اطلاعات بیشتر با داروخانه تماس بگیرید.
+</p>
+
+<div class="contact-buttons">
+
+<a class="btn btn-primary"
+href="tel:02144230342">
+📞 تماس
+</a>
+
+<a class="btn btn-secondary"
+href="sms:09106803313">
+💬 پیامک
+</a>
+
+<a class="btn btn-secondary"
+href="https://www.google.com/maps/search/?api=1&query=ستارخان+نبش+بلوار+شهدای+صادقیه+پلاک+2"
+target="_blank">
+📍 مسیریابی
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<strong>داروخانه دکتر نگین نصیری</strong>
+
+<p>
+صادقیه تهران | خیابان ستارخان
+</p>
+
+<p>
+© 2026 تمامی حقوق محفوظ است.
+</p>
+
+</footer>
+
+
+<a class="float-call"
+href="tel:02144230342"
+aria-label="تماس با داروخانه">
+📞
+</a>
+
+
+<script>
+
+function searchProducts(){
+
+let input =
+document.getElementById("search")
+.value
+.toLowerCase()
+.trim();
+
+let products =
+document.getElementById("productList")
+.children;
+
+for(let i=0;i<products.length;i++){
+
+let text =
+products[i]
+.innerText
+.toLowerCase();
+
+products[i].style.display =
+text.includes(input) ? "" : "none";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
