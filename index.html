@@ -1,929 +1,1450 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>داروخانه دکتر نگین نصیری | صادقیه تهران</title>
+  <title>داروخانه دکتر نگین نصیری | صادقیه تهران</title>
 
-<meta name="description" content="داروخانه دکتر نگین نصیری در صادقیه تهران؛ دارو، مکمل، محصولات پوست و مو، مادر و کودک و تجهیزات پزشکی.">
+  <meta name="description"
+        content="داروخانه دکتر نگین نصیری در صادقیه تهران؛ مکمل‌ها، محصولات پوست و مو، مادر و کودک و تجهیزات پزشکی. استعلام قیمت و سفارش از طریق واتساپ.">
 
-<style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+  <meta name="theme-color" content="#006d77">
 
-html{
-scroll-behavior:smooth;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-font-family:Tahoma,Arial,sans-serif;
-background:#f4f9fa;
-color:#18343b;
-line-height:1.9;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-a{
-text-decoration:none;
-color:inherit;
-}
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f5fbfb;
+      color: #173b40;
+      line-height: 1.9;
+    }
 
-.header{
-background:linear-gradient(135deg,#006d77,#08a6a6);
-color:white;
-padding:25px 16px 32px;
-text-align:center;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.logo{
-width:105px;
-height:105px;
-margin:auto;
-background:white;
-border-radius:30px;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 12px 35px rgba(0,0,0,.18);
-}
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
 
-.logo svg{
-width:82px;
-height:82px;
-}
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #006d77, #008c95);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 20px rgba(0,0,0,.12);
+    }
 
-.header h1{
-font-size:25px;
-margin-top:15px;
-}
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-.header p{
-font-size:14px;
-opacity:.95;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-.nav{
-position:sticky;
-top:0;
-z-index:100;
-background:white;
-display:flex;
-justify-content:center;
-gap:8px;
-flex-wrap:wrap;
-padding:11px;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
-}
+    .logo {
+      width: 54px;
+      height: 54px;
+      flex-shrink: 0;
+    }
 
-.nav a{
-color:#006d77;
-font-size:13px;
-font-weight:bold;
-padding:7px 12px;
-border-radius:20px;
-}
+    .brand h1 {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
 
-.nav a:hover{
-background:#e5f7f7;
-}
+    .brand small {
+      opacity: .9;
+      font-size: 11px;
+    }
 
-.hero{
-max-width:1050px;
-margin:22px auto;
-padding:48px 20px;
-text-align:center;
-background:linear-gradient(135deg,#e1fafa,#ffffff);
-border-radius:28px;
-box-shadow:0 8px 30px rgba(0,0,0,.05);
-}
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
-.hero h2{
-font-size:30px;
-color:#006d77;
-margin-bottom:10px;
-}
+    nav a {
+      font-size: 13px;
+      transition: .2s;
+    }
 
-.hero p{
-max-width:650px;
-margin:auto auto 22px;
-color:#5d7379;
-}
+    nav a:hover {
+      opacity: .7;
+    }
 
-.buttons{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-}
+    .nav-call {
+      background: white;
+      color: #006d77;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
 
-.btn{
-display:inline-block;
-padding:12px 21px;
-border-radius:14px;
-font-weight:bold;
-transition:.2s;
-}
+    /* HERO */
+    .hero {
+      padding: 70px 0;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(0,166,166,.12), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(0,109,119,.10), transparent 30%),
+        #ffffff;
+    }
 
-.btn:hover{
-transform:translateY(-2px);
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 45px;
+      align-items: center;
+    }
 
-.primary{
-background:#006d77;
-color:white;
-}
+    .hero h2 {
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.45;
+      color: #064f56;
+      margin-bottom: 18px;
+    }
 
-.secondary{
-background:white;
-color:#006d77;
-border:1px solid #b9dfe1;
-}
+    .hero h2 span {
+      color: #08a6a6;
+    }
 
-.container{
-max-width:1050px;
-margin:38px auto;
-padding:0 16px;
-}
+    .hero p {
+      color: #587175;
+      max-width: 650px;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
 
-.title{
-text-align:center;
-margin-bottom:22px;
-}
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.title h2{
-color:#006d77;
-font-size:24px;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: .25s;
+      cursor: pointer;
+      border: none;
+    }
 
-.title p{
-font-size:13px;
-color:#71858a;
-}
+    .btn-primary {
+      background: #006d77;
+      color: white;
+    }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:15px;
-}
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #005962;
+    }
 
-.card{
-background:white;
-border-radius:20px;
-padding:22px 12px;
-text-align:center;
-box-shadow:0 6px 22px rgba(0,0,0,.06);
-transition:.2s;
-}
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
 
-.card:hover{
-transform:translateY(-4px);
-}
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+    }
 
-.icon{
-font-size:37px;
-margin-bottom:8px;
-}
+    .btn-light {
+      background: #e9f7f7;
+      color: #006d77;
+    }
 
-.card h3{
-font-size:15px;
-}
+    .hero-card {
+      background: linear-gradient(145deg, #006d77, #08a6a6);
+      color: white;
+      border-radius: 28px;
+      padding: 35px;
+      box-shadow: 0 20px 50px rgba(0,109,119,.22);
+    }
 
-.card p{
-font-size:12px;
-color:#72868b;
-margin-top:5px;
-}
+    .hero-card .big-icon {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
 
-.search{
-max-width:650px;
-margin:0 auto 22px;
-}
+    .hero-card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
 
-.search input{
-width:100%;
-padding:16px 18px;
-border:1px solid #cfe1e4;
-border-radius:16px;
-font-size:15px;
-outline:none;
-background:white;
-}
+    .hero-card p {
+      color: white;
+      opacity: .9;
+      font-size: 14px;
+    }
 
-.search input:focus{
-border-color:#006d77;
-}
+    .location-box {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.25);
+      font-size: 13px;
+    }
 
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
-gap:15px;
-}
+    /* SECTION */
+    section {
+      padding: 65px 0;
+    }
 
-.product{
-background:white;
-border-radius:20px;
-padding:20px 12px;
-text-align:center;
-box-shadow:0 6px 22px rgba(0,0,0,.06);
-transition:.2s;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
 
-.product:hover{
-transform:translateY(-4px);
-}
+    .section-title h2 {
+      color: #075b62;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
 
-.product .icon{
-font-size:38px;
-}
+    .section-title p {
+      color: #728589;
+      font-size: 14px;
+    }
 
-.product h3{
-font-size:15px;
-}
+    /* CATEGORIES */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
 
-.product p{
-font-size:12px;
-color:#71858a;
-}
+    .category {
+      background: white;
+      border-radius: 18px;
+      padding: 22px 10px;
+      text-align: center;
+      box-shadow: 0 7px 25px rgba(0,0,0,.05);
+      transition: .25s;
+    }
 
-.badge{
-display:inline-block;
-margin-top:8px;
-padding:4px 9px;
-border-radius:20px;
-background:#e5f8f8;
-color:#006d77;
-font-size:11px;
-font-weight:bold;
-}
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.09);
+    }
 
-.bestseller{
-border:2px solid #d7eeee;
-}
+    .category-icon {
+      font-size: 31px;
+      margin-bottom: 7px;
+    }
 
-.info{
-background:white;
-border-radius:22px;
-padding:22px;
-box-shadow:0 6px 22px rgba(0,0,0,.06);
-}
+    .category strong {
+      display: block;
+      font-size: 13px;
+    }
 
-.row{
-padding:13px 0;
-border-bottom:1px solid #edf1f2;
-}
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
 
-.row:last-child{
-border-bottom:0;
-}
+    .product {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,.06);
+      transition: .25s;
+      border: 1px solid #edf4f4;
+    }
 
-.row strong{
-color:#006d77;
-}
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.10);
+    }
 
-.hours{
-background:#eaf9f9;
-border-radius:20px;
-padding:18px;
-margin-top:20px;
-text-align:center;
-color:#426168;
-}
+    .product-image {
+      height: 175px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #edfafa, #f8ffff);
+      font-size: 72px;
+    }
 
-.contact{
-background:linear-gradient(135deg,#006d77,#08a6a6);
-color:white;
-padding:35px 18px;
-border-radius:27px;
-text-align:center;
-}
+    .product-content {
+      padding: 18px;
+    }
 
-.contact h2{
-margin-bottom:8px;
-}
+    .badge {
+      display: inline-block;
+      background: #e6f8f7;
+      color: #00747c;
+      font-size: 10px;
+      padding: 4px 9px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
 
-.contact p{
-font-size:14px;
-margin-bottom:18px;
-}
+    .product h3 {
+      font-size: 17px;
+      color: #17484e;
+      margin-bottom: 4px;
+    }
 
-.contact .btn{
-background:white;
-color:#006d77;
-margin:4px;
-}
+    .brand-name {
+      color: #87999c;
+      font-size: 11px;
+      margin-bottom: 9px;
+    }
 
-.footer{
-text-align:center;
-padding:30px 15px;
-font-size:13px;
-color:#71858a;
-}
+    .product-description {
+      color: #697d80;
+      font-size: 12px;
+      line-height: 1.9;
+      min-height: 68px;
+      margin-bottom: 12px;
+    }
 
-.float{
-position:fixed;
-left:18px;
-bottom:18px;
-width:60px;
-height:60px;
-border-radius:50%;
-background:#08a6a6;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:27px;
-box-shadow:0 8px 25px rgba(0,0,0,.25);
-z-index:200;
-}
+    .price {
+      color: #006d77;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      background: #f2fbfb;
+      padding: 7px 10px;
+      border-radius: 9px;
+    }
 
-@media(max-width:600px){
+    .product-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
 
-.header h1{
-font-size:21px;
-}
+    .product-actions a {
+      font-size: 11px;
+      padding: 9px 5px;
+      border-radius: 9px;
+      text-align: center;
+      font-weight: bold;
+    }
 
-.hero{
-margin:15px 10px;
-padding:35px 15px;
-}
+    .call-small {
+      background: #edf7f7;
+      color: #006d77;
+    }
 
-.hero h2{
-font-size:25px;
-}
+    .whatsapp-small {
+      background: #25D366;
+      color: white;
+    }
 
-.container{
-margin:30px auto;
-}
+    /* SEARCH */
+    .search-box {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
 
-}
-</style>
+    .search-box input {
+      width: 100%;
+      border: 1px solid #dceaea;
+      background: white;
+      border-radius: 15px;
+      padding: 16px 20px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      box-shadow: 0 7px 25px rgba(0,0,0,.04);
+    }
+
+    .search-box input:focus {
+      border-color: #08a6a6;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      background: white;
+      padding: 25px 18px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 7px 25px rgba(0,0,0,.05);
+    }
+
+    .service-icon {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .service h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .service p {
+      font-size: 12px;
+      color: #75878a;
+    }
+
+    /* INFO */
+    .info-section {
+      background: #eaf7f7;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    }
+
+    .info-card h3 {
+      color: #006d77;
+      margin-bottom: 15px;
+      font-size: 19px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 10px;
+      margin: 12px 0;
+      font-size: 13px;
+      color: #52696d;
+    }
+
+    .info-row strong {
+      color: #173f44;
+      min-width: 75px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 60px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #006d77, #08a6a6);
+      border-radius: 28px;
+      color: white;
+      padding: 45px 30px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,109,119,.18);
+    }
+
+    .cta-box h2 {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      opacity: .9;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #073f45;
+      color: white;
+      padding: 35px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .footer-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #c6d9db;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .footer-contact a {
+      display: inline-block;
+      margin: 5px;
+      background: rgba(255,255,255,.1);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 10px;
+      color: #a9c3c5;
+    }
+
+    /* FLOATING BUTTON */
+    .floating-whatsapp {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      z-index: 999;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .categories {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        position: relative;
+      }
+
+      .header-inner {
+        padding: 12px 0;
+        flex-wrap: wrap;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 45px 0;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero-card {
+        padding: 25px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-contact {
+        text-align: center;
+      }
+
+      .product-image {
+        height: 190px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
 
-<div class="logo">
+      <a href="#" class="brand">
 
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <div class="logo">
+          <svg viewBox="0 0 100 100"
+               xmlns="http://www.w3.org/2000/svg">
 
-<rect x="5" y="5" width="90" height="90" rx="25" fill="#ffffff"/>
+            <rect x="5" y="5" width="90" height="90"
+                  rx="25" fill="#ffffff"/>
 
-<circle cx="50" cy="50" r="35" fill="#e5f8f8"/>
+            <circle cx="50" cy="50" r="35"
+                    fill="#e5f8f8"/>
 
-<path d="M50 28v44M28 50h44"
-stroke="#006d77"
-stroke-width="8"
-stroke-linecap="round"/>
+            <path d="M50 28v44M28 50h44"
+                  stroke="#006d77"
+                  stroke-width="8"
+                  stroke-linecap="round"/>
 
-<path d="M31 67 C38 60,62 60,69 67"
-fill="none"
-stroke="#08a6a6"
-stroke-width="5"
-stroke-linecap="round"/>
+            <path d="M31 67 C38 60,62 60,69 67"
+                  fill="none"
+                  stroke="#08a6a6"
+                  stroke-width="5"
+                  stroke-linecap="round"/>
+          </svg>
+        </div>
 
-</svg>
+        <div>
+          <h1>داروخانه دکتر نگین نصیری</h1>
+          <small>صادقیه تهران</small>
+        </div>
 
-</div>
+      </a>
 
-<h1>داروخانه دکتر نگین نصیری</h1>
+      <nav>
+        <a href="#products">محصولات</a>
+        <a href="#services">خدمات</a>
+        <a href="#contact">تماس با ما</a>
+        <a class="nav-call" href="tel:02144230342">
+          📞 تماس
+        </a>
+      </nav>
 
-<p>صادقیه تهران | همراه سلامت شما</p>
+    </div>
+  </header>
 
-</header>
 
+  <!-- HERO -->
+  <section class="hero">
 
-<nav class="nav">
+    <div class="container hero-grid">
 
-<a href="#home">خانه</a>
-<a href="#categories">دسته‌بندی</a>
-<a href="#bestsellers">پرفروش‌ها</a>
-<a href="#products">محصولات</a>
-<a href="#services">خدمات</a>
-<a href="#contact">تماس</a>
+      <div>
 
-</nav>
+        <h2>
+          سلامت شما،
+          <span>اولویت ماست</span>
+        </h2>
 
+        <p>
+          داروخانه دکتر نگین نصیری در صادقیه تهران،
+          ارائه‌دهنده دارو، مکمل‌ها، محصولات مراقبت پوست و مو،
+          محصولات مادر و کودک و تجهیزات پزشکی.
+        </p>
 
-<section class="hero" id="home">
+        <div class="hero-buttons">
 
-<h2>همراه سلامت شما</h2>
+          <a class="btn btn-primary"
+             href="tel:02144230342">
+            📞 تماس با داروخانه
+          </a>
 
-<p>
-داروخانه دکتر نگین نصیری؛
-ارائه خدمات دارویی، مکمل‌ها، محصولات پوست و مو،
-مادر و کودک و تجهیزات پزشکی.
-</p>
+          <a class="btn btn-whatsapp"
+             href="https://wa.me/989106803313"
+             target="_blank">
+            💬 سفارش در واتساپ
+          </a>
 
-<div class="buttons">
+          <a class="btn btn-light"
+             href="https://www.google.com/maps/search/?api=1&query=داروخانه+دکتر+نگین+نصیری+ستارخان+صادقیه+تهران"
+             target="_blank">
+            📍 مسیریابی
+          </a>
 
-<a class="btn primary" href="tel:02144230342">
-📞 تماس با داروخانه
-</a>
+        </div>
 
-<a class="btn secondary"
-href="https://www.google.com/maps/search/?api=1&query=داروخانه+دکتر+نگین+نصیری+صادقیه+تهران"
-target="_blank">
-📍 مسیریابی
-</a>
+      </div>
 
-</div>
 
-</section>
+      <div class="hero-card">
 
+        <div class="big-icon">💊</div>
 
-<section class="container" id="categories">
+        <h3>داروخانه دکتر نگین نصیری</h3>
 
-<div class="title">
+        <p>
+          برای اطلاع از قیمت و موجودی محصولات،
+          قبل از مراجعه با داروخانه تماس بگیرید
+          یا از طریق واتساپ پیام دهید.
+        </p>
 
-<h2>دسته‌بندی محصولات</h2>
+        <div class="location-box">
+          📍 بین فلکه اول و دوم صادقیه،
+          خیابان ستارخان،
+          نبش بلوار شهدای صادقیه،
+          پلاک ۲
+        </div>
 
-<p>محصولات مورد نیاز خود را پیدا کنید</p>
+      </div>
 
-</div>
+    </div>
 
+  </section>
 
-<div class="grid">
 
-<div class="card">
-<div class="icon">💊</div>
-<h3>داروها</h3>
-</div>
+  <!-- CATEGORIES -->
+  <section>
 
-<div class="card">
-<div class="icon">💪</div>
-<h3>مکمل‌ها</h3>
-</div>
+    <div class="container">
 
-<div class="card">
-<div class="icon">🧴</div>
-<h3>پوست و مو</h3>
-</div>
+      <div class="section-title">
+        <h2>دسته‌بندی محصولات</h2>
+        <p>محصولات و خدمات مورد نیاز شما در یک مجموعه</p>
+      </div>
 
-<div class="card">
-<div class="icon">👶</div>
-<h3>مادر و کودک</h3>
-</div>
+      <div class="categories">
 
-<div class="card">
-<div class="icon">🩺</div>
-<h3>تجهیزات پزشکی</h3>
-</div>
+        <div class="category">
+          <div class="category-icon">💊</div>
+          <strong>ویتامین‌ها</strong>
+        </div>
 
-<div class="card">
-<div class="icon">🧼</div>
-<h3>بهداشتی</h3>
-</div>
+        <div class="category">
+          <div class="category-icon">🏋️</div>
+          <strong>مکمل‌های ورزشی</strong>
+        </div>
 
-<div class="card">
-<div class="icon">💄</div>
-<h3>آرایشی</h3>
-</div>
+        <div class="category">
+          <div class="category-icon">🧴</div>
+          <strong>مراقبت پوست</strong>
+        </div>
 
-<div class="card">
-<div class="icon">❤️</div>
-<h3>سلامت و مراقبت</h3>
-</div>
+        <div class="category">
+          <div class="category-icon">💇</div>
+          <strong>مراقبت مو</strong>
+        </div>
 
-</div>
+        <div class="category">
+          <div class="category-icon">👶</div>
+          <strong>مادر و کودک</strong>
+        </div>
 
-</section>
+        <div class="category">
+          <div class="category-icon">🩺</div>
+          <strong>تجهیزات پزشکی</strong>
+        </div>
 
+      </div>
 
-<!-- پرفروش‌ترین محصولات -->
+    </div>
 
-<section class="container" id="bestsellers">
+  </section>
 
-<div class="title">
 
-<h2>🔥 پرفروش‌ترین محصولات</h2>
+  <!-- PRODUCTS -->
+  <section id="products">
 
-<p>محصولات پرطرفدار داروخانه</p>
+    <div class="container">
 
-</div>
+      <div class="section-title">
 
+        <h2>🔥 محصولات منتخب</h2>
 
-<div class="products">
+        <p>
+          برای اطلاع از قیمت و موجودی، روی «سفارش در واتساپ» بزنید.
+        </p>
 
+      </div>
 
-<div class="product bestseller">
 
-<div class="icon">☀️</div>
+      <div class="search-box">
 
-<h3>ویتامین D3</h3>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔎 جستجوی محصول..."
+          onkeyup="searchProducts()">
 
-<p>ویتامین و مکمل</p>
+      </div>
 
-<span class="badge">پرفروش</span>
 
-</div>
+      <div class="products" id="productList">
 
 
-<div class="product bestseller">
+        <!-- PRODUCT 1 -->
+        <div class="product">
 
-<div class="icon">🐟</div>
+          <div class="product-image">
+            ☀️
+          </div>
 
-<h3>امگا ۳</h3>
+          <div class="product-content">
 
-<p>مکمل غذایی</p>
+            <span class="badge">ویتامین</span>
 
-<span class="badge">پرفروش</span>
+            <h3>ویتامین D3</h3>
 
-</div>
+            <div class="brand-name">
+              مکمل ویتامین D
+            </div>
 
+            <p class="product-description">
+              مکمل ویتامین D برای کمک به تأمین نیاز بدن
+              و حمایت از سلامت استخوان‌ها و عملکرد طبیعی سیستم ایمنی.
+            </p>
 
-<div class="product bestseller">
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-<div class="icon">💊</div>
+            <div class="product-actions">
 
-<h3>مولتی‌ویتامین</h3>
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-<p>ویتامین و مکمل</p>
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-<span class="badge">پرفروش</span>
+            </div>
 
-</div>
+          </div>
 
+        </div>
 
-<div class="product bestseller">
 
-<div class="icon">⚡</div>
+        <!-- PRODUCT 2 -->
+        <div class="product">
 
-<h3>منیزیم</h3>
+          <div class="product-image">
+            🐟
+          </div>
 
-<p>مکمل غذایی</p>
+          <div class="product-content">
 
-<span class="badge">پرفروش</span>
+            <span class="badge">مکمل</span>
 
-</div>
+            <h3>امگا ۳</h3>
 
+            <div class="brand-name">
+              مکمل اسیدهای چرب امگا ۳
+            </div>
 
-<div class="product bestseller">
+            <p class="product-description">
+              مکمل حاوی اسیدهای چرب امگا ۳ برای کمک به
+              تأمین نیاز بدن و حمایت از عملکرد طبیعی قلب و مغز.
+            </p>
 
-<div class="icon">💇</div>
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-<h3>مکمل مو و ناخن</h3>
+            <div class="product-actions">
 
-<p>مراقبت مو و زیبایی</p>
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-<span class="badge">پرفروش</span>
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-</div>
+            </div>
 
+          </div>
 
-<div class="product bestseller">
+        </div>
 
-<div class="icon">🧴</div>
 
-<h3>ضدآفتاب</h3>
+        <!-- PRODUCT 3 -->
+        <div class="product">
 
-<p>مراقبت پوست</p>
+          <div class="product-image">
+            💊
+          </div>
 
-<span class="badge">پرفروش</span>
+          <div class="product-content">
 
-</div>
+            <span class="badge">مولتی‌ویتامین</span>
 
+            <h3>مولتی‌ویتامین</h3>
 
-<div class="product bestseller">
+            <div class="brand-name">
+              مکمل مولتی‌ویتامین و مینرال
+            </div>
 
-<div class="icon">🫧</div>
+            <p class="product-description">
+              مکمل حاوی مجموعه‌ای از ویتامین‌ها و مواد معدنی
+              برای کمک به تأمین نیازهای تغذیه‌ای روزانه بدن.
+            </p>
 
-<h3>شوینده صورت</h3>
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-<p>مراقبت پوست</p>
+            <div class="product-actions">
 
-<span class="badge">پرفروش</span>
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-</div>
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
+            </div>
 
-<div class="product bestseller">
+          </div>
 
-<div class="icon">🩺</div>
+        </div>
 
-<h3>دستگاه فشارخون</h3>
 
-<p>تجهیزات پزشکی</p>
+        <!-- PRODUCT 4 -->
+        <div class="product">
 
-<span class="badge">پرفروش</span>
+          <div class="product-image">
+            ⚡
+          </div>
 
-</div>
+          <div class="product-content">
 
+            <span class="badge">مکمل</span>
 
-</div>
+            <h3>منیزیم</h3>
 
-</section>
+            <div class="brand-name">
+              مکمل منیزیم
+            </div>
 
+            <p class="product-description">
+              مکمل منیزیم برای کمک به تأمین نیاز بدن
+              و حمایت از عملکرد طبیعی عضلات و سیستم عصبی.
+            </p>
 
-<section class="container" id="products">
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-<div class="title">
+            <div class="product-actions">
 
-<h2>🔎 جستجوی محصولات</h2>
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-<p>نام محصول یا دسته مورد نظر را وارد کنید</p>
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-</div>
+            </div>
 
+          </div>
 
-<div class="search">
+        </div>
 
-<input
-id="search"
-type="text"
-placeholder="مثلاً ویتامین، پوست، مو، کودک..."
-onkeyup="searchProducts()">
 
-</div>
+        <!-- PRODUCT 5 -->
+        <div class="product">
 
+          <div class="product-image">
+            💇‍♀️
+          </div>
 
-<div class="products" id="productList">
+          <div class="product-content">
 
+            <span class="badge">مراقبت مو</span>
 
-<div class="product">
+            <h3>مکمل مو و ناخن</h3>
 
-<div class="icon">💊</div>
+            <div class="brand-name">
+              مکمل‌های تخصصی مو و ناخن
+            </div>
 
-<h3>ویتامین‌ها</h3>
+            <p class="product-description">
+              مکمل‌های حاوی ترکیبات مورد نیاز بدن برای کمک
+              به تأمین مواد مغذی مرتبط با سلامت مو و ناخن.
+            </p>
 
-<p>انواع ویتامین و مکمل</p>
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-</div>
+            <div class="product-actions">
 
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-<div class="product">
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-<div class="icon">💪</div>
+            </div>
 
-<h3>مکمل‌های ورزشی</h3>
+          </div>
 
-<p>محصولات مکمل ورزشی</p>
+        </div>
 
-</div>
 
+        <!-- PRODUCT 6 -->
+        <div class="product">
 
-<div class="product">
+          <div class="product-image">
+            🧴
+          </div>
 
-<div class="icon">🧴</div>
+          <div class="product-content">
 
-<h3>مراقبت پوست</h3>
+            <span class="badge">مراقبت پوست</span>
 
-<p>محصولات تخصصی پوست</p>
+            <h3>ضدآفتاب</h3>
 
-</div>
+            <div class="brand-name">
+              محصولات مراقبت و محافظت پوست
+            </div>
 
+            <p class="product-description">
+              محصولات ضدآفتاب برای کمک به محافظت پوست
+              در برابر اشعه فرابنفش و مراقبت روزانه از پوست.
+            </p>
 
-<div class="product">
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-<div class="icon">💇</div>
+            <div class="product-actions">
 
-<h3>مراقبت مو</h3>
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-<p>محصولات مراقبت مو</p>
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-</div>
+            </div>
 
+          </div>
 
-<div class="product">
+        </div>
 
-<div class="icon">👶</div>
 
-<h3>مادر و کودک</h3>
+        <!-- PRODUCT 7 -->
+        <div class="product">
 
-<p>محصولات مادر و کودک</p>
+          <div class="product-image">
+            🫧
+          </div>
 
-</div>
+          <div class="product-content">
 
+            <span class="badge">پوست</span>
 
-<div class="product">
+            <h3>شوینده صورت</h3>
 
-<div class="icon">🩺</div>
+            <div class="brand-name">
+              محصولات پاک‌کننده پوست
+            </div>
 
-<h3>تجهیزات پزشکی</h3>
+            <p class="product-description">
+              شوینده‌های صورت مناسب روتین مراقبت از پوست
+              برای پاکسازی آلودگی‌ها و چربی اضافی سطح پوست.
+            </p>
 
-<p>لوازم و تجهیزات سلامت</p>
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-</div>
+            <div class="product-actions">
 
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
-</div>
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-</section>
+            </div>
 
+          </div>
 
-<section class="container" id="services">
+        </div>
 
-<div class="title">
 
-<h2>خدمات داروخانه</h2>
+        <!-- PRODUCT 8 -->
+        <div class="product">
 
-</div>
+          <div class="product-image">
+            🩺
+          </div>
 
+          <div class="product-content">
 
-<div class="grid">
+            <span class="badge">تجهیزات پزشکی</span>
 
+            <h3>دستگاه فشارخون</h3>
 
-<div class="card">
+            <div class="brand-name">
+              تجهیزات اندازه‌گیری فشار خون
+            </div>
 
-<div class="icon">👩‍⚕️</div>
+            <p class="product-description">
+              دستگاه‌های اندازه‌گیری فشار خون برای پایش فشار خون
+              در منزل. مدل و موجودی را از داروخانه استعلام کنید.
+            </p>
 
-<h3>مشاوره دارویی</h3>
+            <div class="price">
+              💰 استعلام قیمت و موجودی
+            </div>
 
-<p>
-راهنمایی درباره مصرف صحیح داروها
-</p>
+            <div class="product-actions">
 
-</div>
+              <a class="whatsapp-small"
+                 href="https://wa.me/989106803313"
+                 target="_blank">
+                💬 واتساپ
+              </a>
 
+              <a class="call-small"
+                 href="tel:02144230342">
+                📞 تماس
+              </a>
 
-<div class="card">
+            </div>
 
-<div class="icon">💊</div>
+          </div>
 
-<h3>مکمل و ویتامین</h3>
+        </div>
 
-<p>
-ارائه مکمل‌ها و محصولات ویتامینی
-</p>
 
-</div>
+      </div>
 
+    </div>
 
-<div class="card">
+  </section>
 
-<div class="icon">✨</div>
 
-<h3>پوست و مو</h3>
+  <!-- SERVICES -->
+  <section id="services">
 
-<p>
-محصولات مراقبت و زیبایی
-</p>
+    <div class="container">
 
-</div>
+      <div class="section-title">
 
+        <h2>خدمات داروخانه</h2>
 
-</div>
+        <p>
+          برای اطلاع از خدمات و شرایط ارائه آن‌ها با داروخانه تماس بگیرید.
+        </p>
 
-</section>
+      </div>
 
+      <div class="services">
 
-<section class="container">
+        <div class="service">
+          <div class="service-icon">💊</div>
+          <h3>دارو و نسخه</h3>
+          <p>
+            ارائه دارو و راهنمایی دارویی توسط تیم داروخانه.
+          </p>
+        </div>
 
-<div class="title">
+        <div class="service">
+          <div class="service-icon">💊</div>
+          <h3>مکمل‌ها</h3>
+          <p>
+            انواع مکمل‌های غذایی، ویتامین‌ها و محصولات مرتبط.
+          </p>
+        </div>
 
-<h2>📍 اطلاعات داروخانه</h2>
+        <div class="service">
+          <div class="service-icon">🧴</div>
+          <h3>پوست و مو</h3>
+          <p>
+            محصولات مراقبت از پوست و مو و بهداشت فردی.
+          </p>
+        </div>
 
-</div>
+        <div class="service">
+          <div class="service-icon">🩺</div>
+          <h3>تجهیزات پزشکی</h3>
+          <p>
+            تجهیزات پزشکی و محصولات پایش سلامت با استعلام موجودی.
+          </p>
+        </div>
 
+      </div>
 
-<div class="info">
+    </div>
 
+  </section>
 
-<div class="row">
 
-<strong>🏪 نام:</strong>
+  <!-- INFO -->
+  <section class="info-section" id="contact">
 
-داروخانه دکتر نگین نصیری
+    <div class="container">
 
-</div>
+      <div class="section-title">
 
+        <h2>اطلاعات داروخانه</h2>
 
-<div class="row">
+        <p>
+          قبل از مراجعه برای اطمینان از موجودی یا شرایط دریافت محصول تماس بگیرید.
+        </p>
 
-<strong>📞 تلفن:</strong>
+      </div>
 
-<a href="tel:02144230342">
-02144230342
-</a>
+      <div class="info-grid">
 
-</div>
+        <div class="info-card">
 
+          <h3>📍 آدرس</h3>
 
-<div class="row">
+          <div class="info-row">
+            <strong>مکان:</strong>
+            <span>
+              بین فلکه اول و دوم صادقیه، خیابان ستارخان،
+              نبش بلوار شهدای صادقیه، پلاک ۲
+            </span>
+          </div>
 
-<strong>📱 موبایل:</strong>
+          <a class="btn btn-primary"
+             style="margin-top:15px"
+             href="https://www.google.com/maps/search/?api=1&query=داروخانه+دکتر+نگین+نصیری+ستارخان+صادقیه+تهران"
+             target="_blank">
+            📍 باز کردن مسیریابی
+          </a>
 
-<a href="tel:09106803313">
-09106803313
-</a>
+        </div>
 
-</div>
 
+        <div class="info-card">
 
-<div class="row">
+          <h3>📞 ارتباط با داروخانه</h3>
 
-<strong>📍 آدرس:</strong>
+          <div class="info-row">
+            <strong>تلفن:</strong>
+            <a href="tel:02144230342">
+              ۰۲۱-۴۴۲۳۰۳۴۲
+            </a>
+          </div>
 
-بین فلکه اول و دوم صادقیه،
-خیابان ستارخان،
-نبش بلوار شهدای صادقیه،
-پلاک ۲
+          <div class="info-row">
+            <strong>موبایل:</strong>
+            <a href="tel:09106803313">
+              ۰۹۱۰۶۸۰۳۳۱۳
+            </a>
+          </div>
 
-</div>
+          <div style="margin-top:18px">
 
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/989106803313"
+               target="_blank">
+              💬 پیام در واتساپ
+            </a>
 
-</div>
+          </div>
 
+        </div>
 
-<div class="hours">
+      </div>
 
-<strong>🕐 ساعات کاری</strong>
+    </div>
 
-<br>
+  </section>
 
-برای اطلاع از ساعات کاری و موجودی محصولات،
-با داروخانه تماس بگیرید.
 
-</div>
+  <!-- CTA -->
+  <section class="cta">
 
-</section>
+    <div class="container">
 
+      <div class="cta-box">
 
-<section class="container" id="contact">
+        <h2>محصول مورد نظرت رو پیدا نکردی؟</h2>
 
-<div class="contact">
+        <p>
+          نام محصول را در واتساپ برای ما ارسال کن تا موجودی و قیمت را بررسی کنیم.
+        </p>
 
-<h2>📞 با ما در ارتباط باشید</h2>
+        <a class="btn"
+           style="background:white;color:#006d77"
+           href="https://wa.me/989106803313"
+           target="_blank">
+          💬 ارسال پیام در واتساپ
+        </a>
 
-<p>
-برای تماس، پیامک یا مسیریابی از گزینه‌های زیر استفاده کنید.
-</p>
+      </div>
 
+    </div>
 
-<a class="btn" href="tel:02144230342">
-📞 تماس
-</a>
+  </section>
 
 
-<a class="btn" href="sms:09106803313">
-💬 پیامک
-</a>
+  <!-- FOOTER -->
+  <footer>
 
+    <div class="container">
 
-<a class="btn"
-href="https://www.google.com/maps/search/?api=1&query=داروخانه+دکتر+نگین+نصیری+صادقیه+تهران"
-target="_blank">
-📍 مسیریابی
-</a>
+      <div class="footer-grid">
 
-</div>
+        <div>
 
-</section>
+          <div class="footer-title">
+            داروخانه دکتر نگین نصیری
+          </div>
 
+          <p>
+            صادقیه تهران | خیابان ستارخان
+          </p>
 
-<footer class="footer">
+        </div>
 
-© 2026 داروخانه دکتر نگین نصیری
 
-<br>
+        <div class="footer-contact">
 
-صادقیه تهران
+          <a href="tel:02144230342">
+            📞 ۰۲۱-۴۴۲۳۰۳۴۲
+          </a>
 
-<br>
+          <a href="https://wa.me/989106803313"
+             target="_blank">
+            💬 واتساپ
+          </a>
 
-همراه سلامت شما ❤️
+        </div>
 
-</footer>
+      </div>
 
 
-<a class="float" href="tel:02144230342">
-📞
-</a>
+      <div class="copyright">
 
+        © تمامی حقوق این وب‌سایت متعلق به داروخانه دکتر نگین نصیری است.
 
-<script>
+      </div>
 
-function searchProducts(){
+    </div>
 
-let input =
-document.getElementById("search").value.toLowerCase();
+  </footer>
 
-let products =
-document.querySelectorAll("#productList .product");
 
-products.forEach(function(product){
+  <!-- FLOATING WHATSAPP -->
+  <a class="floating-whatsapp"
+     href="https://wa.me/989106803313"
+     target="_blank"
+     aria-label="واتساپ">
+    💬
+  </a>
 
-let text =
-product.innerText.toLowerCase();
 
-if(text.includes(input)){
+  <!-- SEARCH SCRIPT -->
+  <script>
 
-product.style.display="";
+    function searchProducts() {
 
-}else{
+      const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
 
-product.style.display="none";
+      const products =
+        document.querySelectorAll(".product");
 
-}
+      products.forEach(function(product) {
 
-});
+        const text =
+          product.innerText.toLowerCase();
 
-}
+        if (text.includes(input)) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
 
-</script>
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
